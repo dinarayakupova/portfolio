@@ -1,4 +1,5 @@
 //Home Section 
+
 var menuBtn = document.querySelector('.menu-btn');
 var menu = document.querySelector('.nav-links');
 var menuLinks = document.querySelectorAll('.nav-links li a');
@@ -18,6 +19,22 @@ function menuItemClicked(){
 	menuBtn.classList.remove('active');
 	menu.classList.remove('active');
 }
+
+//ONCE
+let text = "I am Dinara, a Fullstack web developer.";
+let index = 0;
+let speed = 150;
+
+function type() {
+    if(index < text.length) {
+        document.querySelector("#text").textContent += text.charAt(index);
+        index++;
+        setTimeout(type, speed);
+    
+    }
+}
+
+type();
 
 var homeSection = document.querySelector('.home');
 window.addEventListener('scroll', scrollFunction);
