@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Rajdhani', sans-serif;;
+    font-family: 'Rajdhani', sans-serif;
 }
 
 html {
@@ -746,6 +746,10 @@ section{
         max-width: 50%;
        
     }
+
+    .hero .hero-text #text {
+        max-width: 50%;
+    }
       .hero .hero-image {
         width: 40%;
         position: absolute;
@@ -812,12 +816,17 @@ section{
 
 @media(max-width:600px) {
 
+    .hero .hero-text #text {
+        max-width: 100%;
+    }
+
+
     .hero .hero-text p {
         max-width: 100%;
     }
 
     .hero .hero-image{
-		right: -200px;
+		display: none;
 	}
     .home .check-my-work {
         display: flex;
@@ -840,7 +849,6 @@ section{
 } 
 
 
-
 @media(max-width:350px) {
     
     button.contact-btn {
@@ -848,4 +856,3 @@ section{
     }
 
 } 
-
