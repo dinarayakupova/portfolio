@@ -1,4 +1,56 @@
-//Home Section 
+//Hello there
+
+gsap.from(".hello", {
+    x:-100,
+    delay:1
+})
+
+gsap.from (".hero-image", {x: 100})
+
+gsap.from(".steps-full", {y:100})
+
+// gsap.from(".level-up", {
+//     x:-400,
+//     duration:3,
+//     delay:1
+// } )
+
+// Level-up animation
+gsap.from(".level-up", {
+    x: -200,
+    duration: 2,
+    scrollTrigger: {
+        trigger: ".level-up",
+        start: "top bottom-=200",
+        end: "bottom center",
+        toggleActions: "play none none reverse"
+    }
+});
+
+//links, gradual appearance
+gsap.from (".link", {
+    opacity:0,
+    duration:2,
+    delay:2,
+    stagger: 0.6
+})
+
+// Sections on scroll
+const sections = document.querySelectorAll("section");
+sections.forEach((section) => {
+    gsap.from(section, {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+        scrollTrigger: {
+            trigger: section,
+            start: "top bottom-=200",
+            end: "bottom center",
+            toggleActions: "play none none reverse"
+        }
+    });
+});
+
 
 var menuBtn = document.querySelector('.menu-btn');
 var menu = document.querySelector('.nav-links');
