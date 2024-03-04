@@ -1,3 +1,4 @@
+//Animation
 //Hello there
 
 gsap.from(".hello", {
@@ -9,23 +10,6 @@ gsap.from (".hero-image", {x: 100})
 
 gsap.from(".steps-full", {y:100})
 
-// gsap.from(".level-up", {
-//     x:-400,
-//     duration:3,
-//     delay:1
-// } )
-
-// Level-up animation
-gsap.from(".level-up", {
-    x: -200,
-    duration: 2,
-    scrollTrigger: {
-        trigger: ".level-up",
-        start: "top bottom-=200",
-        end: "bottom center",
-        toggleActions: "play none none reverse"
-    }
-});
 
 //links, gradual appearance
 gsap.from (".link", {
@@ -72,8 +56,8 @@ function menuItemClicked(){
 	menu.classList.remove('active');
 }
 
-//ONCE
-let text = "I am Dinara, a Fullstack web developer.";
+//headline appearing
+let text = "I am Dinara, a web developer skilled in design";
 let index = 0;
 let speed = 150;
 
@@ -101,3 +85,12 @@ function scrollFunction(){
 	}
 }
 
+//date for footer
+
+function Footer () {
+let year = new Date().getFullYear();
+    document.querySelector(".footerYear").textContent = year;
+
+}
+
+Footer();
