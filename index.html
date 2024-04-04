@@ -15,8 +15,9 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen&display=swap" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Qwitcher+Grypen:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 
         <script src="https://kit.fontawesome.com/8fdd1e472f.js" crossorigin="anonymous"></script>
         <title>Dinara's Portfolio</title>
@@ -32,19 +33,41 @@
             <!---NAVBAR-->
             <nav class="navbar">
                 <div class="logo">
-                    <img src = "img/new_logo.png">
+                    <img src = "img/new_logo-min.png">
                 </div>
                 <ul class="nav-links">
-                    <li class="link"><a href="#about">About</a></li>
-                    <li class="link"><a href="#skills">Skills</a></li>
+                    <li class="link" id="menuAbout"><a href="#about">About</a></li>
+                    <li class="link" id="menuSkills"><a href="#skills">Skills</a></li>
                     <li class="link"><a href="#resume">Resume</a></li>
-                    <li class="link"><a href="#portfolio">Portfolio</a></li>
+                    <li class="link" id="menuPort"><a href="#portfolio">Portfolio</a></li>
                     
                 </ul>
 
                 <a href = "#contactForm" class="button-wrapper">
                     <button class="btn contact-btn">Contact</button>
                 </a>
+                
+                
+<!---LIGT/DARK MODE AND LANGUAGE MENU -->
+
+                <div class="modeLang"> 
+                
+                    <i class="fa-regular fa-moon" id="toggleDark"></i> 
+               
+               
+                    <label for="lang" id="lang-icon">
+                    <i class="fas fa-globe"></i>
+                    </label>
+    
+
+                <select id="lang" name="lang" class="hidden">
+                    <option value="en">🍪English</option>
+                    <option value="fr">🥐 French</option>
+                </select>
+            </div>
+                   
+        
+                
                 <div class="menu-btn">
                     <span class="bar"></span>
                     <span class="bar"></span>
@@ -57,7 +80,7 @@
             <section class="hero" id="hero">
                 <div class="hero-text">
                     <h4 class="hello">Hello, there</h4>
-                    <h3 id="text"><br></h3>
+                    <h3 id="text">I am Dinara, a web developer skilled in design<br></h3>
                     <p>With six years of marketing experience and a newly acquired 
                         "Software Development" degree, I'm a seasoned professional. 
                         My passion lies in digitally implementing brand messages 
@@ -65,49 +88,44 @@
                         </p>
                 </div>
                     <div class="hero-image">
-                        <img src="img/my_photo.jpeg">
+                        <img src="img/Dinara_Y_Photo.jpeg">
                         </div>
                 
             </section>
                  <!---STEPS-->
                  
                  <div class="steps-full">
-                 <h1 class="heading">Working with me is simple</h1>
+                 <h1 class="heading">Here's where my passion lies:</h1>
                  <div class="steps-container">
                  <div class="step-item">
-                 <h3 class="step-heading">Discovery</h3>
+                 <h3 class="step-heading" id="brandStr">Brand Strategy</h3>
                  <br>
                  <h2 class="numbers">1.</h2>
                  <br>
-                 <p>The first step is to go over business goals, 
-                 audience and what visual ideas through digital 
-                 implementation you have in mind.</p>
+                 <p id="brandStrDesc">Brand strategy defines identity, ensures consistency, targets the right audience, gains a competitive edge, and fosters growth and loyalty.</p>
                  </div>
                     
                  <div class="step-item">
-                 <h3 class="step-heading">Brand Strategy</h3>
+                 <h3 class="step-heading" id="ui">UI / UX</h3>
                  <br> 
                  <h2 class="numbers">2.</h2>
                  <br>
-                 <p>In this phase, we formulate a comprehensive brand 
-                    strategy to guide our design and development efforts.</p>
+                 <p id="uiDesc">Effective UI/UX design enhances satisfaction with smooth, intuitive experiences, boosting engagement and retention.</p>
                  </div>
 
                  <div class="step-item">
-                 <h3 class="step-heading">Design</h3>
+                 <h3 class="step-heading" id="webDes">Web Design</h3>
                  <br>
                  <h2 class="numbers">3.</h2>
                  <br>
-                 <p>We create visually compelling brand elements and 
-                    agree on the approach of web pages customization.</p> </div>
+                 <p id="webDesDesc">A well-designed website impresses, conveying professionalism and credibility to captivate visitors.</p> </div>
 
                  <div class="step-item">
-                 <h3 class="step-heading">Code</h3>
+                 <h3 class="step-heading" id="frontDev">Frontend Development</h3>
                  <br>
                  <h2 class="numbers">4.</h2>
                  <br>
-                 <p>Here we bring these designs to life
-                    through meticulous coding and digital implementation.</p></div>
+                 <p id="frontDevDesc">Careful coding is critical to ensuring the reliability, functionality, and performance of software applications. Clean and well-structured code facilitates collaboration among developers and simplifies maintenance and updates.</p></div>
                  </div>
                                                 
                                                     
@@ -128,27 +146,24 @@
                  <div class="icon-wrapper">
                  <i class="fa-solid fa-chess-knight"></i>
                  </div>
-                 <h2>Digital Strategy</h2>
-                 <p>Research user journey needs, studying the competition, 
-                    identifying SEO keywords, GSOT and content strategy.</p>                                      
+                 <h2 id="marketStr">Marketing Strategy</h2>
+                 <p id="marketStrDesc">Research user journey needs, studying the competition , identifying SEO keywords, GSOT and content strategy.</p>                                      
                  </div>
 		
                  <div class="service-box">
                  <div class="icon-wrapper">
                  <i class="fa-solid fa-palette"></i>
                  </div>
-                 <h2>Web Design</h2>
-                 <p>Creating the design and layout of web pages, designing 
-                    graphics, preparing the content.</p>
+                 <h2 id="webDesign">Web Design</h2>
+                 <p>Figma, Canva, Sketch, Framer, InVision, Adobe Photoshop. Also Wordpress Design.</p>
                  </div>
                                             
                  <div class="service-box">
                  <div class="icon-wrapper">
                  <i class="fa-solid fa-code"></i>
                  </div>
-                 <h2>Web Development</h2>
-                 <p>Web implementation and testing site functionality & usability, 
-                    site maintenance.</p>
+                 <h2 id="webDevelop">Web Development</h2>
+                 <p>HTML, CSS, JavaScript, PHP, React/Node.js, Express, Tailwind CSS, Bootstrap, GSAP, MySQL, MongoDB, Firestore</p>
                  </div>
                                                 
                  </div>
@@ -165,13 +180,13 @@
              <!--Left column: Education-->
             <div class="column column-left">
                 <header class="sub-heading"> 
-                    <h2>Education</h2>
+                    <h2 id="education">Education</h2>
                 </header>
                 <main class="resume-contents">
                     <div class="box">
                         <h4>2022 - 2023</h4>
-                        <h3>Software Development, Vanier College</h3>
-                        <p>Engaging in a dynamic learning journey focused on building the skills 
+                        <h3 class="titleExperience">Software Development, Vanier College</h3>
+                        <p id="vanierDesc">Engaging in a dynamic learning journey focused on building the skills 
                             and knowledge needed to create software applications. We delved 
                             into the programming languages (Java, JS, CSharp, Flutter), algorithms, 
                             and data structures, honing their ability to design, code, and test software. </p>
@@ -179,16 +194,16 @@
 
                     <div class="box">
                         <h4>2021 - 2022</h4>
-                        <h3>Digital Marketing, York University</h3>
-                        <p>Learning to leverage digital channels such as social media, email, SEO, 
+                        <h3 class="titleExperience">Digital Marketing, York University</h3>
+                        <p id="yorkDesc">Learning to leverage digital channels such as social media, email, SEO, 
                             and PPC to drive brand visibility and engagement. Exploring consumer behavior, 
                             data analysis, and content creation techniques to craft effective marketing strategies.</p>
                     </div>
 
                     <div class="box">
                         <h4>2009 - 2014</h4>
-                        <h3>Advertising and PR, Moscow University of Culture & Arts</h3>
-                        <p>Learning the strategies and tactics behind successful public relations, including crisis management, 
+                        <h3 class="titleExperience">Advertising and PR, Moscow University of Culture & Arts</h3>
+                        <p id="uniDesc">Learning the strategies and tactics behind successful public relations, including crisis management, 
                             media relations, and stakeholder engagement. Studying art of crafting compelling advertising campaigns, 
                             honing skills in creative messaging, design, and media planning..</p>
                     </div>
@@ -199,14 +214,19 @@
 
               <div class="column column-right">
                 <header class="sub-heading">
-                    <h2>Experiences</h2>
+                    <h2 id="experiences">Experiences</h2>
                 </header>
 
                 <main class="resume-contents">
                     <div class="box">
+                        <h4>2023-now</h4>
+                        <h3 class="titleExperience">Full Stack Web Developer, KinoKlik</h3>
+                        <p id="kinoklikDesc">MERN (MongoDB, Express, React & Node) application development, debugging and testing code, feature design and implementation. Working on UI/UX of the app.  </p>
+                    </div>
+                    <div class="box">
                         <h4>2019-2020</h4>
-                        <h3>Marketing Manager, Kabrita brand</h3>
-                        <p>Developing and executing marketing strategies tailored to promote 
+                        <h3 class="titleExperience">Marketing Manager, Kabrita brand</h3>
+                        <p id="kabritaDesc">Developing and executing marketing strategies tailored to promote 
                             and sell infant and toddler food products. Market research 
                             to understand consumer needs, preferences, and trends in the 
                             baby nutrition industry. Monitoring sales performance to meet revenue goals.</p>
@@ -214,8 +234,8 @@
 
                     <div class="box">
                         <h4>2013-2019</h4>
-                        <h3>Client Account Manager, TBWA / BBDO / McCann</h3>
-                        <p>Responsible for project management, ensuring that campaigns meet deadlines 
+                        <h3 class="titleExperience">Client Account Manager, TBWA / BBDO / McCann</h3>
+                        <p id="agencyDesc">Responsible for project management, ensuring that campaigns meet deadlines 
                             and budget constraints. Collaborating closely with clients to understand 
                             their goals and vision. Providing directions to creative teams and productions.  
                             Monitoring campaign performance, analyzing results, and making data-driven 
@@ -224,8 +244,8 @@
 
                     <div class="box">
                         <h4>2010-2013</h4>
-                        <h3>Photographer & English Tutor</h3>
-                        <p>Portrait  landscape photography and event photography.  
+                        <h3 class="titleExperience">Photographer & English Tutor</h3>
+                        <p id="photoDesc">Portrait  landscape photography and event photography.  
                             Post-processing tasks to perfect photos, which include adjusting color balance, 
                             exposure, and contrast, removing imperfections. Assisting students with 
                             English homework, assignments, and exam preparation.</p>
@@ -235,7 +255,12 @@
 
          </div>
          </div>
+        
+        
         </section>
+        <a href="pdf/Marketing Specialist_Dinara Y._CV.pdf" download >
+            <button class="btn downloadSend-btn" id="downloadCV">Download CV</button>
+        </a>
 
         <!-- PORTFOLIO   -->
 
@@ -243,30 +268,43 @@
 	
             <header class="heading">
                 <h3>Portfolio</h3>
-               <h2>Some Of My Works</h2>
-                <p>Presenting my small projects, with many more on the horizon.</p>
+               <h2 id="portHead">Some Of My Works</h2>
+                <p id="portParag">Presenting my small projects, with many more on the horizon.</p>
             </header>
-    
+            <div class="buttonsPort">
+                <button class="btn" onclick="showGallery('easy-apps')">
+                    <h1>Easy Apps</h1>
+                    <p>Html, CSS, JavaScript</p>
+                </button>
+                <button class="btn" onclick="showGallery('web-design')">
+                    <h1>Web Design</h1>
+                    <p>Figma, Sketch</p>
+                </button>
+                <button class="btn" onclick="showGallery('wordpress')">
+                    <h1>Wordpress</h1>
+                    <p>CMS</p>
+                </button>
+            </div>
                                                 
             <main class="mainContainer">      
-                <div class="gallery">
+                <div class="gallery" id="easy-apps-gallery">
             
                 <div class="item design">
-                <img src="img/daily-hub.png">
+                <img src="img/daily-hub-min.png">
                 <div class="overlay">
                 <a href="https://daily-center.glitch.me" target="_blank">VIEW MORE</a>
                 </div>
                 </div>
                                                            
                 <div class="item design">
-                <img src="img/smart-travel.png">
+                <img src="img/smart-travel-min.png">
                 <div class="overlay">
                 <a href="https://smart-travel-agency.glitch.me/" target="_blank">VIEW MORE</a>
                 </div>
                 </div>
                                                            
                 <div class="item code">
-                <img src="img/bill-share.png">
+                <img src="img/bill-share-min.png">
                 <div class="overlay">
                 <a href="https://smart-split-bill.glitch.me/" target="_blank">VIEW MORE</a>
                 </div>
@@ -275,7 +313,7 @@
                                                             
                                                             
                 <div class="item logo">
-                <img src="img/weather-forecast.png">
+                <img src="img/weather-forecast-min.png">
                 <div class="overlay">
                 <a href="https://get-the-weather-report.glitch.me/" target="_blank">VIEW MORE</a>
                 </div>
@@ -283,7 +321,7 @@
               
 
                 <div class="item code">
-                    <img src="img/christmas -clock.png">
+                    <img src="img/christmas -clock-min.png">
                     <div class="overlay">
                     <a href="https://coming-home-for-christmas.glitch.me/" target="_blank">VIEW MORE</a>
                     </div>
@@ -291,12 +329,44 @@
 
 
                     <div class="item code">
-                        <img src="img/bubbles.png">
+                        <img src="img/bubbles-min.png">
                         <div class="overlay">
                         <a href="https://guess-the-number-gamee.glitch.me" target="_blank">VIEW MORE</a>
                         </div>
                         </div>
+                </div>
 
+                <div class="gallery" id="web-design-gallery" style="display: none;">
+                    <div class="item design">
+                        <img src="img/Yoga.png">
+                        <div class="overlay">
+                      <a href="pdf/Yoga Studio.pdf" open target="_blank">VIEW MORE</a>
+                        </div>
+                        </div>
+
+                                <div class="item design">
+                                    <img src="img/Clinique.png">
+                                    <div class="overlay">
+                                  <a href="pdf/Clinique.pdf" open target="_blank">VIEW MORE</a>
+                                    </div>
+                                    </div>
+
+                                    <div class="item design">
+                                        <img src="img/PhotoStudio.png">
+                                        <div class="overlay">
+                                      <a href="pdf/Photo Studio.pdf" open target="_blank">VIEW MORE</a>
+                                        </div>
+                                        </div>
+        
+                   
+                </div>
+                <div class="gallery" id="wordpress-gallery" style="display: none;">
+                    <div class="item design">
+                        <img src="img/NexGen.png">
+                        <div class="overlay">
+                      <a href="https://nex-gen-marketing.online" target="_blank" >VIEW MORE</a>
+                        </div>
+                        </div>
 
                 </div>
                 
@@ -315,7 +385,7 @@
                     action="https://formspree.io/f/myyqpzra"
                     method="POST">
                     <div class="heading">
-                    <label>
+                    <label id="email">
                       Your email:
                       <div>
                       <input class = "inputGroup" type="email" name="email">
@@ -323,7 +393,7 @@
                     </label>
                 </div>
                 <div class="heading">
-                    <label>
+                    <label id="message">
                       Your message:
                       <div>
                       <textarea class = "inputGroup" name="message"></textarea>
@@ -332,23 +402,23 @@
                 </div>
                     <!-- your other form fields go here -->
                     <div class="heading">
-                    <button class="btn" type="submit">Send</button>
+                    <button class="btn downloadSend-btn"  id="sendMessage" type="submit">Send</button>
                 </div>
                   </form>
         </section>
                   
                     <footer>
                         <p class="footerYear"></p>
-                       <p > &nbspDinara Yakupova. All rights reserved.</p> 
+                       <p > &nbspDinara Yakupova. <span id="rights">All rights reserved.</span></p> 
                     </footer>
                     
-    </div>
+                </div>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
   
         <script src="script.js"></script>
-        
+   
         </div>
     </body>
 </html>
